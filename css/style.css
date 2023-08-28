@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&family=Poppins:wght@300;400;500;600;700;900&family=Prata&family=Roboto:wght@300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +6,35 @@
   list-style: none;
 }
 
+body {
+  background: #7B7B7B;
+  font-family: "Roboto", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Prata", serif;
+  font-family: "Lato", sans-serif;
+}
+
 .nunito-sans {
   font-family: "Nunito Sans", sans-serif;
+}
+
+.roboto-fonts {
+  font-family: "Roboto", sans-serif;
+}
+
+.frame_3_fonts h1, .frame_3_fonts h2, .frame_3_fonts h3, .frame_3_fonts h4, .frame_3_fonts h5, .frame_3_fonts h6 {
+  font-family: "Prata", serif;
+}
+.frame_3_fonts p {
+  font-family: "Lato", sans-serif;
 }
 
 .resume-wrapper {
   width: 815px;
   height: auto;
   display: flex;
+  background: #fff;
   margin: 30px auto;
 }
 
@@ -29,8 +50,11 @@
   height: 245px;
 }
 .resume-left .mail-address {
-  padding: 20px 0 0px 20px;
-  margin-bottom: 45px;
+  padding: 50px 0 13px 20px;
+  margin-bottom: 40px;
+  position: relative;
+  margin-top: -26.5px;
+  z-index: 111111;
 }
 .resume-left .mail-address li {
   display: flex;
@@ -59,6 +83,16 @@
   width: 19px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.resume-left .mail-address::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgba(238, 188, 118, 0.57);
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 .resume-left .left-title {
   display: flex;
@@ -99,7 +133,7 @@
 }
 .resume-left .academic-qualification {
   padding-left: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .resume-left .academic-qualification li {
   color: #FFF;
@@ -111,6 +145,38 @@
 }
 .resume-left .academic-qualification li:first-child {
   font-weight: 800;
+}
+.resume-left .language-option .single-language-option {
+  margin-bottom: 6px;
+}
+.resume-left .language-option .single-language-option .language {
+  background: rgba(238, 188, 118, 0.57);
+  color: #FFF;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding-left: 40px;
+  margin-bottom: 10px;
+}
+.resume-left .language-option .single-language-option .language-skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+}
+.resume-left .language-option .single-language-option .language-skill li {
+  color: #F5D9B1;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.resume-left .language-option .single-language-option .language-skill li .icon {
+  display: block;
 }
 
 .resume-right {
@@ -255,6 +321,7 @@
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  margin-bottom: 15px;
 }
 .resume-right .reference-wrap .single-reference {
   background: #F5F5F5;
@@ -293,5 +360,756 @@
   margin-bottom: 5px;
 }
 .resume-right .reference-wrap .single-reference .information li .icon {
+  line-height: 1px;
+}
+
+.resume-wrapper.frame-2 .frame-left {
+  width: calc(100% - 275px);
+}
+.resume-wrapper.frame-2 .frame-left .candidate-info {
+  padding-top: 40px;
+}
+.resume-wrapper.frame-2 .frame-left .candidate-info .f-name {
+  color: #BD5B29;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  margin-bottom: 6px;
+  font-family: "Roboto", sans-serif;
+}
+.resume-wrapper.frame-2 .frame-left .candidate-info .f-name .l-name {
+  font-weight: 900;
+}
+.resume-wrapper.frame-2 .frame-left .candidate-info .designation {
+  color: #354260;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #FBF5F3;
+  padding-left: 20px;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.resume-wrapper.frame-2 .frame-left .candidate-info .career-objective {
+  color: #7B7B7B;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  padding-left: 23px;
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+}
+.resume-wrapper.frame-2 .frame-left .candidate-info .mailing-address {
+  background: #FBF5F3;
+  padding: 10px 0 5px 20px;
+  margin: 0 25px 15px 0;
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  flex-wrap: wrap;
+}
+.resume-wrapper.frame-2 .frame-left .candidate-info .mailing-address li {
+  width: 49%;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  border-radius: 20px;
+  border: 1px solid rgba(189, 91, 41, 0.2);
+  background: #FFF;
+  margin-bottom: 5px;
+  color: #7B7B7B;
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.resume-wrapper.frame-2 .frame-left .candidate-info .mailing-address li .icon {
+  background: #BD5B29;
+  display: flex;
+  width: 26px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
+}
+.resume-wrapper.frame-2 .frame-left .single-experience {
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+.resume-wrapper.frame-2 .frame-left .single-experience .experience-title {
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F5F5F5;
+  margin-bottom: 10px;
+}
+.resume-wrapper.frame-2 .frame-left .single-experience .experience-title .designation {
+  color: #000;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.resume-wrapper.frame-2 .frame-left .single-experience .experience-title .company-name {
+  color: #23576D;
+  font-family: Nunito Sans;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.resume-wrapper.frame-2 .frame-left .single-experience .experience-title .experience-duration {
+  color: #23576D;
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.resume-wrapper.frame-2 .frame-left .single-experience .description {
+  color: #7B7B7B;
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  padding-left: 23px;
+}
+.resume-wrapper.frame-2 .frame-left .language-box {
+  margin: 30px 25px 28px 20px;
+  border: 1px solid #DADADA;
+}
+.resume-wrapper.frame-2 .frame-left .language-box .title {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 18px;
+  text-transform: uppercase;
+  background: #BD5B29;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+}
+.resume-wrapper.frame-2 .frame-left .language-box .language-option-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 40px 15px 20px;
+  justify-content: space-between;
+  row-gap: 15px;
+}
+.resume-wrapper.frame-2 .frame-left .language-box .single-option {
+  display: flex;
+  align-items: center;
+}
+.resume-wrapper.frame-2 .frame-left .language-box .single-option .language-name {
+  color: #BD5B29;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 18px;
+  width: 80px;
+}
+.resume-wrapper.frame-2 .frame-left .language-box .single-option .skill-list {
+  border: 1px solid rgba(238, 188, 118, 0.57);
+  display: inline-block;
+  position: relative;
+  padding: 7px;
+}
+.resume-wrapper.frame-2 .frame-left .language-box .single-option .skill-list::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: calc(100% - 10px);
+  left: 45%;
+  background: rgba(245, 217, 177, 0.37);
+  top: 5px;
+}
+.resume-wrapper.frame-2 .frame-left .language-box .single-option .skill-list li {
+  color: #7B7B7B;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.resume-wrapper.frame-2 .frame-left .language-box .single-option .skill-list li span {
+  padding-right: 20px;
+  font-weight: 700;
+  width: 50%;
+  display: inline-block;
+}
+.resume-wrapper.frame-2 .frame-right {
+  width: 275px;
+  background: rgba(240, 240, 240, 0.6);
+  padding: 0 8px;
+}
+.resume-wrapper.frame-2 .frame-right .image {
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1px;
+  margin-bottom: 10px;
+}
+.resume-wrapper.frame-2 .frame-right .image img {
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  border: 4px solid rgba(189, 91, 41, 0.39);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.resume-wrapper.frame-2 .frame-right .frame-right-title {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 18px;
+  text-transform: uppercase;
+  background: #BD5B29;
+  display: block;
+  padding: 3px 15px;
+  margin-bottom: 2px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .skill-items {
+  border: 1px solid rgba(189, 91, 41, 0.39);
+  background: #FBF5F3;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 10px 10px 10px 13px;
+  margin-bottom: 10px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .skill-items li {
+  color: #7B7B7B;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(189, 91, 41, 0.08);
+  margin-bottom: 7px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .skill-items li:last-child {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0;
+  margin-bottom: 0px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .personal-details.skill-items li .option-title {
+  color: #BD5B29;
+  font-weight: 800;
+  width: 45%;
+  display: inline-block;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .skill-items.education {
+  padding: 5px 0px 10px 13px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .skill-items.education li {
+  padding-bottom: 0px;
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .skill-items.education li .name {
+  color: #BD5B29;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .skill-items.education li .institute {
+  color: #797979;
+  font-size: 11px;
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 16px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .skill-items.education li .year {
+  color: #BD5B29;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .single-reference {
+  background: #F4F2F1;
+  padding: 4px 10px 10px 10px;
+  margin-bottom: 4px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .single-reference .name {
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .single-reference .company-name {
+  color: #BD5B29;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: normal;
+  display: block;
+  margin-bottom: 4px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .single-reference .information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box .single-reference .information li {
+  color: #7B7B7B;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+.resume-wrapper.frame-2 .frame-right .widget-box.reference-box {
+  margin-bottom: 10px;
+}
+
+.resume-wrapper.frame_3 {
+  border-top: 3px solid #CA6D18;
+  flex-direction: column;
+}
+.resume-wrapper.frame_3 .frame_3_title {
+  color: #CA6D18;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+.resume-wrapper.frame_3 .frame_3_header {
+  display: flex;
+  align-items: start;
+  padding-top: 15px;
+  background-image: url("./../images/background.png");
+  width: 100%;
+  min-height: 253px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 11;
+}
+.resume-wrapper.frame_3 .frame_3_header .image {
+  flex-basis: 215px;
+  text-align: center;
+}
+.resume-wrapper.frame_3 .frame_3_header .image img {
+  width: 165px;
+  height: 165px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.resume-wrapper.frame_3 .frame_3_header .candidate-info {
+  flex-basis: calc(100% - 215px);
+  padding-right: 25px;
+}
+.resume-wrapper.frame_3 .frame_3_header .candidate-info h5 {
+  color: #CA6D18;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31.864px;
+}
+.resume-wrapper.frame_3 .frame_3_header .candidate-info h3 {
+  color: #222;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 4px;
+}
+.resume-wrapper.frame_3 .frame_3_header .candidate-info p {
+  color: #7B7B7B;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  font-family: "Nunito Sans", sans-serif;
+  margin-bottom: 12px;
+}
+.resume-wrapper.frame_3 .frame_3_header .candidate-info .mail-address {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.resume-wrapper.frame_3 .frame_3_header .candidate-info .mail-address li {
+  color: #222;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.587px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.resume-wrapper.frame_3 .frame_3_header .candidate-info .mail-address li .icon {
+  line-height: 1px;
+}
+.resume-wrapper.frame_3 .frame_3_content {
+  display: flex;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left {
+  flex-basis: calc(100% - 330px);
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .skill-box {
+  background: rgba(246, 246, 246, 0.6);
+  padding: 70px 0 28px 20px;
+  position: relative;
+  z-index: 1;
+  margin: -55px 15px 20px 0;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .skill-box li {
+  color: #7B7B7B;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 2px;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .skill-box li span {
+  width: 50%;
+  display: inline-block;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .experience-box {
+  padding-left: 20px;
+  margin-right: 15px;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .experience-box .experience-wrapper {
+  border-left: 2px solid rgba(245, 217, 177, 0.37);
+  padding: 5px 0px 5px 20px;
+  margin-left: 7px;
+  margin-bottom: 15px;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .experience-box .experience-wrapper .single-experience {
+  margin-bottom: 10px;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .experience-box .experience-wrapper .single-experience:last-child {
+  margin-bottom: 0;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .experience-box .experience-wrapper .single-experience .designation {
+  color: #222;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .experience-box .experience-wrapper .single-experience .designation::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: rgba(245, 217, 177, 0.37);
+  top: 50%;
+  transform: translateY(-50%);
+  left: -27px;
+  border-radius: 50%;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .experience-box .experience-wrapper .single-experience .company-year {
+  color: #CA6D18;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_left .experience-box .experience-wrapper .single-experience .description {
+  color: #797979;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  font-family: "Poppins", sans-serif;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_right {
+  flex-basis: 330px;
+  padding: 0 10px;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_right .personal-details {
+  margin-bottom: 20px;
+  margin-top: -25px;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_right .personal-details li {
+  color: #7B7B7B;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: normal;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_right .personal-details li span {
+  color: #CA6D18;
+  font-weight: 800;
+  display: inline-block;
+  width: 30%;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_right .education-learning li {
+  margin-bottom: 10px;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_right .education-learning li .name {
+  color: #CA6D18;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_right .education-learning li .institute {
+  color: #797979;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.resume-wrapper.frame_3 .frame_3_content .frame_3_right .education-learning li .year {
+  color: #797979;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.resume-wrapper.frame_3 .frame_3_reference .frame_3_title {
+  border-top: 1px solid rgba(238, 188, 118, 0.57);
+  border-bottom: 1px solid rgba(238, 188, 118, 0.57);
+  padding: 5px 20px;
+}
+.resume-wrapper.frame_3 .frame_3_reference .reference-wrap {
+  padding-left: 30px;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-bottom: 15px;
+}
+.resume-wrapper.frame_3 .frame_3_reference .reference-wrap .single-reference {
+  padding: 10px;
+  border: 1px solid #DADADA;
+  min-width: 220px;
+}
+.resume-wrapper.frame_3 .frame_3_reference .reference-wrap .single-reference .name {
+  color: #CA6D18;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+}
+.resume-wrapper.frame_3 .frame_3_reference .reference-wrap .single-reference .company-name {
+  color: #7B7B7B;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  border-bottom: 1px solid #E3E3E3;
+  display: block;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+}
+.resume-wrapper.frame_3 .frame_3_reference .reference-wrap .single-reference .information li {
+  color: #7B7B7B;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  margin-bottom: 5px;
+}
+.resume-wrapper.frame_3 .frame_3_reference .reference-wrap .single-reference .information li .icon {
+  line-height: 1px;
+}
+
+.resume-wrapper.frame_4 {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  flex-direction: column;
+}
+.resume-wrapper.frame_4 .frame_4_header {
+  width: 100%;
+}
+.resume-wrapper.frame_4 .frame_4_header .left-shape {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 1;
+}
+.resume-wrapper.frame_4 .frame_4_header .left-shape img {
+  height: 310px;
+}
+.resume-wrapper.frame_4 .frame_4_header .right-shape {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 1;
+}
+.resume-wrapper.frame_4 .frame_4_header .right-shape img {
+  height: 320px;
+}
+.resume-wrapper.frame_4 .frame_4_header .info-wrapper {
+  display: flex;
+}
+.resume-wrapper.frame_4 .frame_4_header .candidate-info {
+  position: relative;
+  z-index: 11;
+  margin-top: 95px;
+  padding-left: 52px;
+  flex-basis: calc(100% - 350px);
+}
+.resume-wrapper.frame_4 .frame_4_header .candidate-info .candidate-name {
+  color: #333;
+  font-size: 32.926px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.resume-wrapper.frame_4 .frame_4_header .candidate-info .designation {
+  color: #333;
+  font-size: 21.458px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.resume-wrapper.frame_4 .frame_4_header .candidate-info .information {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 440px;
+  row-gap: 17px;
+}
+.resume-wrapper.frame_4 .frame_4_header .candidate-info .information li {
+  min-width: 170px;
+  color: #4D4D4D;
+  font-size: 16.463px;
+  font-weight: 400;
+}
+.resume-wrapper.frame_4 .frame_4_header .candidate-info .information li svg {
+  margin-right: 10px;
+}
+.resume-wrapper.frame_4 .frame_4_header .candidate-img {
+  flex-basis: 350px;
+  position: relative;
+  z-index: 11;
+  margin-top: 32px;
+}
+.resume-wrapper.frame_4 .frame_4_header .candidate-img img {
+  height: 281px;
+  width: 281px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 17px solid #fff;
+}
+.resume-wrapper.frame_4 .main-content {
+  display: flex;
+  padding: 20px 35px 50px 50px;
+  background: #FAFAFA;
+}
+.resume-wrapper.frame_4 .main-content .common-title {
+  width: 213.835px;
+  height: 31.993px;
+  background: #C6D9DF;
+  color: #333;
+  font-size: 19.207px;
+  font-weight: 700;
+  line-height: 31px;
+  padding-left: 13px;
+  margin-bottom: 12px;
+}
+.resume-wrapper.frame_4 .main-content .content-left {
+  flex-basis: 50%;
+  border-right: 2.5px solid #C6D9DF;
+  padding-right: 15px;
+}
+.resume-wrapper.frame_4 .main-content .content-left .description {
+  color: #7B7B7B;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  margin-bottom: 12px;
+}
+.resume-wrapper.frame_4 .main-content .content-left .education-wrap li {
+  margin-bottom: 10px;
+}
+.resume-wrapper.frame_4 .main-content .content-left .education-wrap li .school-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+.resume-wrapper.frame_4 .main-content .content-left .education-wrap li .school-name::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-left: 11px solid #333333;
+  border-bottom: 9px solid transparent;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.resume-wrapper.frame_4 .main-content .content-left .education-wrap li .school-name span {
+  color: #333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.resume-wrapper.frame_4 .main-content .content-left .education-wrap li .details {
+  color: #7B7B7B;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+}
+.resume-wrapper.frame_4 .main-content .content-left .reference .single-reference .name {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.resume-wrapper.frame_4 .main-content .content-left .reference .single-reference .company-name {
+  color: #7B7B7B;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  border-bottom: 1px solid #E3E3E3;
+  display: block;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.resume-wrapper.frame_4 .main-content .content-left .reference .single-reference .information li {
+  color: #7B7B7B;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  margin-bottom: 5px;
+}
+.resume-wrapper.frame_4 .main-content .content-left .reference .single-reference .information li .icon {
   line-height: 1px;
 }
